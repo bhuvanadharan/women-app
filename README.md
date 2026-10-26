@@ -179,4 +179,4 @@ own README covering every feature, the security model and troubleshooting).
 
 ## Git Lab Experiment
 
-This project demonstrates Git version control using the git-lab branch.
+This project demonstrates Git version control using both Git branches.
