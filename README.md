@@ -175,3 +175,10 @@ own README covering every feature, the security model and troubleshooting).
   It needs three one-time setup steps first (register a Web app on the
   Firebase project, publish this repo's updated `firestore.rules`, and add
   yourself to the `admins` collection). See the README on that branch.
+
+
+## Git Lab Experiment
+
+This project is a women's safety mobile application developed using Flutter and Dart.
+
+This section was added to demonstrate Git version control, commits, branches, and collaboration.
