@@ -179,6 +179,4 @@ own README covering every feature, the security model and troubleshooting).
 
 ## Git Lab Experiment
 
-This project is a women's safety mobile application developed using Flutter and Dart.
-
-This section was added to demonstrate Git version control, commits, branches, and collaboration.
+This project demonstrates Git version control using the git-lab branch.
