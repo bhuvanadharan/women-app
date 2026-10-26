@@ -182,3 +182,9 @@ own README covering every feature, the security model and troubleshooting).
 This project is a women's safety mobile application developed using Flutter and Dart.
 
 This section was added to demonstrate Git version control, commits, branches, and collaboration.
+
+## Login Feature
+
+The SafeHer application includes a login feature for users.
+This feature branch demonstrates how login-related changes
+can be developed separately using Git.
