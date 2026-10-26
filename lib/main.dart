@@ -1,7 +1,9 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+
 import 'firebase_options.dart';
 import 'screens/splash_screen.dart';
 import 'screens/tracking/tracking_viewer_screen.dart';
@@ -20,7 +22,7 @@ void main() async {
   // soon as possible rather than an empty list. Doesn't block first frame.
   unawaited(ContactsService.init());
 
-  runApp(const SafeHerApp());
+  runApp(const AsterApp());
 }
 
 @pragma('vm:entry-point')
@@ -28,14 +30,14 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 }
 
-class SafeHerApp extends StatefulWidget {
-  const SafeHerApp({super.key});
+class AsterApp extends StatefulWidget {
+  const AsterApp({super.key});
 
   @override
-  State<SafeHerApp> createState() => _SafeHerAppState();
+  State<AsterApp> createState() => _AsterAppState();
 }
 
-class _SafeHerAppState extends State<SafeHerApp> {
+class _AsterAppState extends State<AsterApp> {
   final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
 
   @override
@@ -71,7 +73,7 @@ class _SafeHerAppState extends State<SafeHerApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: _navigatorKey,
-      title: 'SafeHer',
+      title: 'Aster',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       home: const SplashScreen(),

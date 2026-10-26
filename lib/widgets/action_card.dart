@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme/app_theme.dart';
 
 /// The bordered icon + title + subtitle cards on the Home dashboard grid.
@@ -40,35 +41,37 @@ class _ActionCardState extends State<ActionCard> {
         duration: const Duration(milliseconds: 120),
         curve: Curves.easeOut,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.all(color: AppColors.neutral300),
-            borderRadius: BorderRadius.circular(AppRadius.r4),
+            color: AppColors.surface,
+            border: Border.all(color: AppColors.neutral200),
+            borderRadius: BorderRadius.circular(AppRadius.r12),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                width: 41,
-                height: 41,
-                decoration: const BoxDecoration(
-                  color: Color(0xFFF3F3F3),
+                width: 42,
+                height: 42,
+                decoration: BoxDecoration(
+                  color: AppColors.primary.withValues(alpha: 0.08),
                   shape: BoxShape.circle,
                 ),
                 alignment: Alignment.center,
-                child: Icon(widget.icon, color: AppColors.black, size: 22),
+                child: Icon(widget.icon, color: AppColors.primary, size: 22),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 9),
               Text(
                 widget.title,
-                style: AppTextStyles.semibold16,
+                style: AppTextStyles.semibold16.copyWith(
+                  color: AppColors.primaryGrey,
+                ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 5),
               Text(
                 widget.subtitle,
-                style: AppTextStyles.b5,
+                style: AppTextStyles.b5.copyWith(color: AppColors.neutral900),
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,

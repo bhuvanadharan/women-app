@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+
 import '../../services/voice_command_service.dart';
 import '../../widgets/bottom_nav_bar.dart';
 import '../history/history_tab.dart';
 import '../profile/profile_tab.dart';
 import '../sos/sos_screen.dart';
+import '../../theme/app_theme.dart';
 import '../tracking/live_tracking_tab.dart';
 import 'home_tab.dart';
 
@@ -51,7 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
     if (!mounted || _sosScreenActive) return;
     _sosScreenActive = true;
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (_) => const SosScreen(autoTrigger: true)))
+        .push(
+          MaterialPageRoute(builder: (_) => const SosScreen(autoTrigger: true)),
+        )
         .then((_) => _sosScreenActive = false);
   }
 
@@ -63,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.page,
       body: SafeArea(
         child: Stack(
           children: [
@@ -72,8 +76,8 @@ class _HomeScreenState extends State<HomeScreen> {
               children: _tabs,
             ),
             Positioned(
-              left: 15,
-              right: 15,
+              left: 16,
+              right: 16,
               bottom: 12,
               child: BottomNavBar(
                 current: _tab,

@@ -56,7 +56,7 @@ class RoutingService {
     });
     try {
       final response = await http
-          .get(uri, headers: {'User-Agent': 'SafeHerApp/1.0 (safety demo)'})
+          .get(uri, headers: {'User-Agent': 'AsterApp/1.0 (safety demo)'})
           .timeout(const Duration(seconds: 10));
       if (response.statusCode != 200) return [];
 

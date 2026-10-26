@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../theme/app_theme.dart';
 import '../../widgets/app_text_field.dart';
 import '../nearby_help/nearby_help_screen.dart';
@@ -23,7 +24,7 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
   final _scrollController = ScrollController();
   final List<_Message> _messages = [
     const _Message(
-      "Hi, I'm your SafeHer Assistant. Ask me about emergency steps, first aid, or nearby help.",
+      "Hi, I'm your Aster assistant. Ask me about emergency steps, first aid, or nearby help.",
       false,
     ),
   ];

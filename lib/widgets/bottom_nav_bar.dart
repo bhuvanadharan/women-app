@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme/app_theme.dart';
 
 enum SafeHerTab { home, tracking, history, profile }
@@ -43,16 +44,17 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 64,
-      padding: const EdgeInsets.symmetric(horizontal: 6),
+      height: 70,
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 7),
       decoration: BoxDecoration(
         color: AppColors.navBackground,
-        borderRadius: BorderRadius.circular(32),
+        border: Border.all(color: AppColors.neutral200),
+        borderRadius: BorderRadius.circular(AppRadius.r12),
         boxShadow: const [
           BoxShadow(
-            color: Colors.black12,
-            blurRadius: 12,
-            offset: Offset(0, 4),
+            color: Color(0x120E302A),
+            blurRadius: 24,
+            offset: Offset(0, 8),
           ),
         ],
       ),
@@ -92,10 +94,12 @@ class _NavItem extends StatelessWidget {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 260),
         curve: Curves.easeOut,
-        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+        margin: const EdgeInsets.symmetric(horizontal: 3),
         decoration: BoxDecoration(
-          color: active ? AppColors.primary : Colors.transparent,
-          borderRadius: BorderRadius.circular(24),
+          color: active
+              ? AppColors.primary.withValues(alpha: 0.1)
+              : Colors.transparent,
+          borderRadius: BorderRadius.circular(AppRadius.r5),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -107,15 +111,16 @@ class _NavItem extends StatelessWidget {
               child: Icon(
                 active ? item.icon : item.outlineIcon,
                 key: ValueKey(active),
-                color: active ? Colors.white : AppColors.navInactive,
-                size: 22,
+                color: active ? AppColors.primary : AppColors.navInactive,
+                size: 21,
               ),
             ),
             const SizedBox(height: 2),
             AnimatedDefaultTextStyle(
               duration: const Duration(milliseconds: 200),
               style: AppTextStyles.b5.copyWith(
-                color: active ? Colors.white : AppColors.navInactive,
+                color: active ? AppColors.primary : AppColors.navInactive,
+                fontWeight: active ? FontWeight.w700 : FontWeight.w500,
               ),
               child: Text(
                 item.label,

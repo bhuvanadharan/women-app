@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
 
@@ -26,7 +27,7 @@ class GeocodingService {
     });
     try {
       final response = await http
-          .get(uri, headers: {'User-Agent': 'SafeHerApp/1.0 (safety demo)'})
+          .get(uri, headers: {'User-Agent': 'AsterApp/1.0 (safety demo)'})
           .timeout(const Duration(seconds: 8));
       if (response.statusCode != 200) return [];
       final data = jsonDecode(response.body) as List;
@@ -53,7 +54,7 @@ class GeocodingService {
     });
     try {
       final response = await http
-          .get(uri, headers: {'User-Agent': 'SafeHerApp/1.0 (safety demo)'})
+          .get(uri, headers: {'User-Agent': 'AsterApp/1.0 (safety demo)'})
           .timeout(const Duration(seconds: 8));
       if (response.statusCode != 200) return null;
       final data = jsonDecode(response.body) as Map<String, dynamic>;

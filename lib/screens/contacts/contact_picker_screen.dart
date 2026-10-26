@@ -141,7 +141,7 @@ class _ContactPickerScreenState extends State<ContactPickerScreen> {
       case _LoadState.permissionDenied:
         return _Message(
           icon: Icons.contacts_outlined,
-          text: "SafeHer needs permission to read your contacts to import them. "
+          text: "Aster needs permission to read your contacts to import them. "
               "You can allow it from your phone's Settings, then try again.",
           actionLabel: 'Try again',
           onAction: _load,

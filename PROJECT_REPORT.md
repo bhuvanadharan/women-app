@@ -1,8 +1,8 @@
-# SafeHer — Project Report
+# Aster — Project Report
 
 ## Abstract
 
-SafeHer is a women's safety mobile application built in Flutter, designed
+Aster is a personal safety mobile application built in Flutter, designed
 around a simple premise: help should be one tap — or one shake, or one
 spoken phrase — away. The app is organized into nine functional modules
 covering identity and trusted contacts, an SOS alert system, live location
@@ -228,7 +228,7 @@ home safely.
   the Google Maps Flutter SDK.
 - **Cloud Firestore** (`live_sessions` collection) — the live-sharing
   backend; a session document updates in real time as the user moves, and
-  contacts with the SafeHer app can watch it.
+  contacts with the Aster app can watch it.
 
 **What's done:** Real GPS-driven tracking and speed display, real
 destination search and map-tap pinning, real road routing with a route
@@ -243,7 +243,7 @@ and auto-ends the session with a safety log entry).
 **What's missing and why:**
 - **The actual web tracking viewer** — the live-share link currently sent
   to contacts points to a placeholder ("Web viewer coming soon, please
-  open in SafeHer app"). Building a real web viewer was scoped from the
+  open in Aster app"). Building a real web viewer was scoped from the
   start of the project as its *own* separate web app (Flutter Web or
   React) reading the same Firestore `live_sessions` collection — nobody
   has started that repository yet, so it doesn't exist, rather than being

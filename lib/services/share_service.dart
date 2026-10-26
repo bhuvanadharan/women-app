@@ -93,9 +93,9 @@ class ShareService {
   }) {
     final link = 'https://safeher.app/track/$sessionId';
     final vehicle = vehicleNumber ?? 'N/A';
-    return 'I am sharing my live trip to $destination via SafeHer.\n'
+    return 'I am sharing my live trip to $destination via Aster.\n'
         'Vehicle: $vehicle\n'
         'Track here: $link\n'
-        '(Note: Web viewer coming soon, please open in SafeHer app)';
+        '(Note: Web viewer coming soon, please open in Aster app)';
   }
 }

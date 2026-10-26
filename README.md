@@ -1,6 +1,6 @@
-# SafeHer
+# Aster
 
-**SafeHer** is an AI-enabled women's safety mobile app — one-tap SOS alerts,
+**Aster** is a personal safety mobile app — one-tap SOS alerts,
 live location sharing, a fake-call escape tool, a safety chatbot, nearby
 police/hospital/NGO lookup, and more. Built with Flutter so a single
 codebase targets Android, iOS, and web.

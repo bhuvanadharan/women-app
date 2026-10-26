@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 
-/// The orange CTA button used across every SafeHer screen.
+/// The primary CTA button used across Aster screens.
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
     super.key,

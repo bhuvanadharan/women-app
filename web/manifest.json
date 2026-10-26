@@ -1,11 +1,11 @@
 {
-    "name": "SafeHer",
-    "short_name": "SafeHer",
+    "name": "Aster",
+    "short_name": "Aster",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FFFFFF",
-    "theme_color": "#FF5C02",
-    "description": "SafeHer — AI-enabled women safety app.",
+    "theme_color": "#185B50",
+    "description": "Aster — thoughtful personal safety tools, always in your corner.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

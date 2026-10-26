@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 
-/// Design tokens pulled from the SafeHer Figma file.
+/// Shared visual tokens for Aster.
 class AppColors {
   AppColors._();
 
-  static const primary = Color(0xFFFF5C02);
-  static const primaryGrey = Color(0xFF202124);
-  static const neutral200 = Color(0xFFE8E8E8);
-  static const neutral300 = Color(0xFFD2D2D2);
-  static const neutral400 = Color(0xFFBBBBBB);
-  static const neutral900 = Color(0xFF4A4A4A);
-  static const fieldFill = Color(0xFFFAFAFA);
-  static const navBackground = Color(0xFFF3F3F3);
-  static const navInactive = Color(0xFF676767);
-  static const dot = Color(0xFFD9D9D9);
-  static const black = Color(0xFF000000);
+  static const primary = Color(0xFF185B50);
+  static const primaryGrey = Color(0xFF18342F);
+  static const accent = Color(0xFFD7F17A);
+  static const danger = Color(0xFFD9574D);
+  static const page = Color(0xFFF5F6F2);
+  static const surface = Color(0xFFFFFFFF);
+  static const neutral200 = Color(0xFFE6EAE5);
+  static const neutral300 = Color(0xFFD5DDD6);
+  static const neutral400 = Color(0xFFA3B0A8);
+  static const neutral900 = Color(0xFF56635D);
+  static const fieldFill = Color(0xFFF1F4F0);
+  static const navBackground = Color(0xFFFFFFFF);
+  static const navInactive = Color(0xFF78857E);
+  static const dot = Color(0xFFD5DDD6);
+  static const black = Color(0xFF182A26);
 }
 
 class AppRadius {
@@ -23,6 +27,7 @@ class AppRadius {
   static const r4 = 8.0;
   static const r5 = 10.0;
   static const r6 = 12.0;
+  static const r12 = 24.0;
 }
 
 class AppTextStyles {
@@ -77,10 +82,13 @@ class AppTheme {
 
   static ThemeData get light => ThemeData(
     useMaterial3: true,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: AppColors.page,
     colorScheme: ColorScheme.fromSeed(
       seedColor: AppColors.primary,
       primary: AppColors.primary,
+      secondary: AppColors.accent,
+      surface: AppColors.surface,
+      error: AppColors.danger,
       brightness: Brightness.light,
     ),
     textTheme: const TextTheme().apply(
@@ -88,10 +96,27 @@ class AppTheme {
       displayColor: AppColors.black,
     ),
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.page,
       foregroundColor: AppColors.black,
       elevation: 0,
       surfaceTintColor: Colors.transparent,
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AppColors.fieldFill,
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(AppRadius.r6),
+        borderSide: const BorderSide(color: AppColors.neutral200),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(AppRadius.r6),
+        borderSide: const BorderSide(color: AppColors.neutral200),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(AppRadius.r6),
+        borderSide: const BorderSide(color: AppColors.primary, width: 1.5),
+      ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(

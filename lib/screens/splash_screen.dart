@@ -1,10 +1,12 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import '../services/auth_service.dart';
 import '../services/user_repository.dart';
 import '../theme/app_theme.dart';
 import '../utils/page_transitions.dart';
+import '../widgets/aster_mark.dart';
 import 'auth/profile_setup_screen.dart';
 import 'home/home_screen.dart';
 import 'onboarding/onboarding_screen.dart';
@@ -53,7 +55,9 @@ class _SplashScreenState extends State<SplashScreen>
     // one, so it must not skip onboarding/phone-verification for a
     // brand-new install.
     if (user == null || user.isAnonymous) {
-      Navigator.of(context).pushReplacement(slideRoute(const OnboardingScreen()));
+      Navigator.of(
+        context,
+      ).pushReplacement(slideRoute(const OnboardingScreen()));
       return;
     }
 
@@ -61,7 +65,11 @@ class _SplashScreenState extends State<SplashScreen>
     final profile = await UserRepository.getProfile(user.uid);
     if (!mounted) return;
     Navigator.of(context).pushReplacement(
-      slideRoute(profile?.profileComplete == true ? const HomeScreen() : const ProfileSetupScreen()),
+      slideRoute(
+        profile?.profileComplete == true
+            ? const HomeScreen()
+            : const ProfileSetupScreen(),
+      ),
     );
   }
 
@@ -75,7 +83,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.page,
       body: Center(
         child: FadeTransition(
           opacity: _fade,
@@ -84,30 +92,23 @@ class _SplashScreenState extends State<SplashScreen>
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SvgPicture.asset(
-                  'assets/images/logo.svg',
-                  width: 175,
-                  height: 84,
+                const AsterMark(size: 78),
+                const SizedBox(height: 17),
+                Text(
+                  'ASTER',
+                  style: AppTextStyles.h5.copyWith(
+                    fontSize: 28,
+                    letterSpacing: 5,
+                    color: AppColors.primaryGrey,
+                  ),
                 ),
-                const SizedBox(height: 12),
-                RichText(
-                  text: TextSpan(
-                    style: AppTextStyles.b3.copyWith(
-                      color: const Color(0xFF1D1D1D),
-                    ),
-                    children: const [
-                      TextSpan(text: 'Your '),
-                      TextSpan(
-                        text: 'shield',
-                        style: TextStyle(color: AppColors.primary),
-                      ),
-                      TextSpan(text: ', '),
-                      TextSpan(
-                        text: 'one tap',
-                        style: TextStyle(color: AppColors.primary),
-                      ),
-                      TextSpan(text: ' away'),
-                    ],
+                const SizedBox(height: 8),
+                Text(
+                  'SAFETY, IN YOUR CORNER.',
+                  style: AppTextStyles.b4.copyWith(
+                    color: AppColors.neutral900,
+                    letterSpacing: 1.2,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ],
