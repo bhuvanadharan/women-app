@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "831160190675",
-    "project_id": "safeher-206b6",
-    "storage_bucket": "safeher-206b6.firebasestorage.app"
+    "project_number": "326700580923",
+    "project_id": "aster-e0786",
+    "storage_bucket": "aster-e0786.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:831160190675:android:c0d2539b59e698b121b626",
+        "mobilesdk_app_id": "1:326700580923:android:e01ee9b3878e4948c99c1e",
         "android_client_info": {
           "package_name": "com.example.safe_her"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBbKC5YmnDT-biRKORDokTS-UvYECqu5N8"
+          "current_key": "AIzaSyBnx0GuH4CfeopxMrx1g8KzjLsKYiX0kmY"
         }
       ],
       "services": {

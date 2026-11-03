@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -50,19 +47,27 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBbKC5YmnDT-biRKORDokTS-UvYECqu5N8',
-    appId: '1:831160190675:android:c0d2539b59e698b121b626',
-    messagingSenderId: '831160190675',
-    projectId: 'safeher-206b6',
-    storageBucket: 'safeher-206b6.firebasestorage.app',
+    apiKey: 'AIzaSyBnx0GuH4CfeopxMrx1g8KzjLsKYiX0kmY',
+    appId: '1:326700580923:android:e01ee9b3878e4948c99c1e',
+    messagingSenderId: '326700580923',
+    projectId: 'aster-e0786',
+    storageBucket: 'aster-e0786.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBvuYfpmzuD94UfKi5E7yKvf39ruXt68lw',
-    appId: '1:831160190675:ios:9832a3e44d7bab1221b626',
-    messagingSenderId: '831160190675',
-    projectId: 'safeher-206b6',
-    storageBucket: 'safeher-206b6.firebasestorage.app',
+    apiKey: 'AIzaSyB6n38SAsVZDsOOqNRrkQi9inWyQBf70IM',
+    appId: '1:326700580923:ios:3e26eb84e3029be5c99c1e',
+    messagingSenderId: '326700580923',
+    projectId: 'aster-e0786',
+    storageBucket: 'aster-e0786.firebasestorage.app',
     iosBundleId: 'com.example.safeHer',
+  );
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyAjDM3rrd-VZkicS98d0FGkvLw-WnzWDp4',
+    appId: '1:326700580923:web:8f1c437c33c664d1c99c1e',
+    messagingSenderId: '326700580923',
+    projectId: 'aster-e0786',
+    authDomain: 'aster-e0786.firebaseapp.com',
+    storageBucket: 'aster-e0786.firebasestorage.app',
+    measurementId: 'G-W44N125117',
   );
 }

@@ -180,3 +180,5 @@ own README covering every feature, the security model and troubleshooting).
 ## Git Lab Experiment
 
 This project demonstrates Git version control using both Git branches.
+
+Git diff and Git blame help developers inspect code changes.
